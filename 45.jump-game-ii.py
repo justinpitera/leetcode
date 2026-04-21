@@ -15,6 +15,7 @@ class Solution:
         for i in range(n - 1):
             max_reach = max(max_reach, i + nums[i])
             
+            # review
             if i == curr_reach:
                 jumps += 1
                 curr_reach = max_reach

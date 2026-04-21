@@ -12,6 +12,8 @@ class Solution:
         for i in range(len(nums)):
             if i > max_reach:
                 return False
+            
             max_reach = max(max_reach, i + nums[i])
-        return True    
+            
+        return True
 # @lc code=end
