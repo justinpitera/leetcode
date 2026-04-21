@@ -7,19 +7,18 @@
 # @lc code=start
 class Solution:
     def jump(self, nums: List[int]) -> int:
-        n = len(nums)
+        length = len(nums)
         max_reach = 0
-        curr_reach = 0
+        end = 0
         jumps = 0
         
-        for i in range(n - 1):
+        for i in range(length - 1):
             max_reach = max(max_reach, i + nums[i])
             
-            # review
-            if i == curr_reach:
+            if i == end:
                 jumps += 1
-                curr_reach = max_reach
-        
+                end = max_reach
+
         return jumps
         
         
