@@ -1,3 +1,10 @@
+#
+# @lc app=leetcode id=55 lang=python3
+#
+# [55] Jump Game
+#
+
+# @lc code=start
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         max_reach = 0
@@ -6,6 +13,5 @@ class Solution:
             if i > max_reach:
                 return False
             max_reach = max(max_reach, i + nums[i])
-        
-        return True            
-            
+        return True    
+# @lc code=end
